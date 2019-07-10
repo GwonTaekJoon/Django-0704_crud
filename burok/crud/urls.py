@@ -22,5 +22,6 @@ import viewcrud.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', viewcrud.views.welcome, name = "welcome"),
-    path('funccrud/', include(viewcrud.urls)),
+    path('funccrud/', include('viewcrud.urls')),
+    path('accounts/', include('accounts.urls'))
 ]

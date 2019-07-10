@@ -4,8 +4,9 @@ from . import views
 
 urlpatterns = [
     path('', views.read, name = "home"),
-    #path('newblog/', views.create, name = "newblog"), # funccrud/newblog 형태의 url생성
-    #path('update/<int:pk>', views.update, name="update"),
-    #path('delete/<int:pk>', views.delete, name='delete'),
-    #path('add_comment/<int:pk>', views.add_comment, name='add_comment'),
+    path('newblog/', views.create, name = "newblog"), # funccrud/newblog 형태의 url생성
+    path('update/<int:pk>', views.update, name="update"),
+    path('delete/<int:pk>', views.delete, name='delete'),
+    path('add_comment/<int:pk>', views.add_comment, name='add_comment'),
+    path('blog/<int:blog_id>',views.detail,name="detail"),
 ]
